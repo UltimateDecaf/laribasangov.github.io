@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-top: 10;
+    margin-bottom: 0;
+    font-size: 2.0 rem; /* Larger font size for name */
+}
+
+.portrait-img {
+    border-radius: 50%;
+    max-width: 200px;
+    margin-top: 20px;
+}
+
+img {
+    border-radius: 50%;
+    max-width: 200px;
+    margin-top: 20px;
+}
+
+#links {
+    margin-top: 20px;
+}
+
+#links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+#buttons {
+    margin-top: 20px;
+}
+
+.button {
+    background-color: #444;
+    color: #fff;
+    padding: 15px 30px; /* Larger padding for buttons */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.2rem; /* Larger font size for buttons */
+}
+.small-button {
+    max-width: 30px; /* Limit the width of the buttons */
+}
+
+.small-button:hover {
+    transform: scale(1.1);
+}
+.button:hover {
+    background-color: #666;
+    transform: scale(1.1);
+}
+
+#skills, #projects {
+    display: none;
+    margin-top: 20px;
+}
+
+.skill-list {
+    text-align: justify;
+}
+.fade {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out; /* Adjust the transition duration as needed */
+}
+
+.fade.hidden {
+    opacity: 0;
+    pointer-events: none; /* Ensure that hidden elements are not clickable */
+}
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.project {
+    display: none;
+}
+
+.project-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.project-button {
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin: 0 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-button:hover {
+    transform: scale(1.1);
+}
+
+.project-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-img {
+    max-width: 100%; /* Ensure the image does not exceed the container's width */
+    height: auto; /* Allow the height to adjust proportionally */
+    border-radius: 50% !important; /* Make the image circular, and ensure it takes precedence */
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any default padding */
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-details p {
+    max-width: 800px; /* Adjust the max-width as needed */
+    margin: 20px; /* Adjust margin as needed */
+    text-align: center; /* Center-align the text */
+}
+/* Styles for dark mode */
+body.dark-mode {
+    color: #fff; /* White text color */
+    background-color: #333; /* Dark background color */
+    transition: background-color 0.5s, color 0.5s; /* Smooth transition for background color and text color */
+}
+
+/* Styles for light mode */
+body:not(.dark-mode) {
+    color: #000; /* Black text color */
+    background-color: #FEFCF3; /* White background color */
+    transition: background-color 0.5s, color 0.5s; /* Smooth transition for background color and text color */
+}
+
+/* Style for theme toggle button */
+#theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #333; /* Dark button background color */
+    color: #fff; /* White button text color */
+    transition: background-color 0.5s, color 0.5s; /* Smooth transition for button background color and text color */
+}
+
+/* Additional style for dark mode button */
+.dark-mode #theme-toggle {
+    background-color: #fff; /* White button background color */
+    color: #333; /* Dark button text color */
+}
+
+footer {
+
+    padding-top: 400px;
+    text-align: center;
+}
+small{
+    padding-top: 0px;
+}
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
+    .button {
+        padding: 12px 24px; /* Adjust padding for smaller screens */
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+    .project-button {
+        width: 80px; /* Adjust width for smaller screens */
+        height: 80px; /* Adjust height for smaller screens */
+    }
+}

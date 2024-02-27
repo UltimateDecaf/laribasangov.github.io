@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lari Basangov's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="dark-mode"> <!-- Set initial mode to dark mode -->
+    <div class="container">
+        <button id="theme-toggle" onclick="toggleTheme()">Light Mode</button> <!-- Button to toggle theme -->
+        <h1>
+            <img src="photo.jpg" alt="My Photo">
+           <h1> Lari Basangov</h1>
+            <h4 style="margin-bottom: 0;"><i>MSc Computer Science'23<br>University of Birmingham</i></h4>
+        </h1>
+        <div id="links">
+            <a id="linkedin-link" href="www.linkedin.com/in/lari-basangov"><img id="linkedin-img" class="small-button" src="linkedin-dark.png" alt="LinkedIn"></a> <!-- LinkedIn button with image -->
+            <a id="github-link" href="https://github.com/UltimateDecaf"><img id="github-img" class="small-button" src="github-dark.png" alt="GitHub"></a> <!-- GitHub button with image -->
+            <a id="email-link" href="mailto:basangovlari@gmail.com"><img id="email-img" class="small-button" src="email-dark.png" alt="Email"></a> <!-- Email button with image -->
+        </div>
+        <p style="font-size: 1.2rem;">I am a Game Programmer (Unity), who actively learns C++.</p> <!-- Larger font size for description -->
+        <div id="buttons">
+            <button class="button" onclick="showSkills()">Skills</button>
+            <button class="button" onclick="showProjects()">Projects</button>
+        </div>
+        <div id="skills">
+            <ul class="skill-list">
+                <li><h3>Programming languages</h3></li>
+                <ul class="skill-list">
+                    <li><b>C# (Unity)</b> - experience in game jams, and small-scale projects</li>
+                    <li><b>C++</b> - currently learn, have a small project made with SFML</li>
+                    <li><b>Java</b> - studied in the university, if needed, I can revive my knowledge of it</li>
+                </ul>
+                <li><h3>Game Engines</h3></li>
+                <ul class="skill-list">
+                    <li><b>Unity</b>- comfortable with it, and tools like Cinemachine, Netcode for GameObjects.</li>
+                    <li><b>Unreal Engine</b> - learning, know the layout and know the basics of Blueprints.</li>
+                    <li><b>ZDoom ACS, ZScript</b> - if for some reason, you want to make a game in GZDoom, I could countribute!</li>
+                </ul>
+                <li><h3>Other tools</h3></li>
+                <ul>
+                    <ul class="skill-list">
+                        <li>Version Control with Git LFS</li>
+                        <li>Adobe Photoshop</li>
+                        <li>PuTTy, WinSCP </li>
+                        <li>Ultimate Doom Builder</li>
+                    </ul>
+                </ul>
+            </ul>
+        </div>
+        <div id="projects" class="fade">
+            <div class="project-buttons">
+                <div class="project-button"><img src="birmindoom.png" alt="Project 1" class="project-img" onclick="showProject('project1-details')"></div>
+<div class="project-button"><img src="crunchy.png" alt="Project 2" class="project-img" onclick="showProject('project2-details')"></div>
+<div class="project-button"><img src="hardestgame.png" alt="Project 3" class="project-img" onclick="showProject('project3-details')"></div>
+            </div>
+            <div class="project-buttons">
+                <div class="project-button"><img src="bubbleclicker.png" alt="Project 4" class="project-img" onclick="showProject('project4-details')"></div>
+                <div class="project-button"><img src="techsurvival.png" alt="Project 5" class="project-img" onclick="showProject('project5-details')"></div>
+            </div>
+            <div class="project" id="project1-details">
+                <h2>BirminDoom </h2>
+                <h4>November 2022 - February 2023, March 2024 - now</h4>
+                <p>My role: Project Lead, Level Designer </p>
+                <p>This is a Doom II annual project that I lead. Naturally, BirminDoom is experimental in nature, and this year's iteration aims to seriously change original Doom's formula, so I expect a lot of work with ZScript.</p>
+                <p>BirminDoom 2023: my contributions: </p>
+                <ul class="skill-list">
+                    <li>Hub map for levels (implementation + concept)</li>
+                    <li>MAP01: Another Emergency</li>
+                    <li>Feedback / Game Testing</li>
+                    <li>Additional programming: scripting </li>
+                </ul>
+                <p>Some takeaways:</p>
+                <ul class="skill-list">
+                    <li>Used scripting to affect gameplay in my map: took away weapons from the player, teleported enemies, etc.</li>
+                    <li>Learnt a lot about how to give feedback in a supportive manner. it helped some maps to be clearer with their intentions.</li>
+                    <li>The project is powered by David Newton's RAMPART, so I got some experience reading code made by someone else.</li>
+                <p></p>
+                </ul>
+                <a href="https://birmindoom.teamouse.net/download.php" class="button">BirminDoom 2023</a>
+                <a href="https://birmindoom2.doomproject.com/" class="button">BirminDoom 2024</a>
+            </div>
+            <div class="project" id="project2-details">
+                <h2>Crunchy Wants Cake</h2>
+                <h4>Global Game Jam 2024 (January 26-28, 2024)</h4>
+                <p>My role: Programmer, Audio Design</p>
+                <p>Tech used: Unity, C#</p>
+                <p>In this project, I handled technical aspects, from setting up a version control with Git LFS to making some major architecture decisions.
+
+                    I went with the following solution:
+                    <ul  class="skill-list">
+                        <li>Isolated reading input and passing it to other scripts with a Singleton class Controls. Initially, we had different kinds of input, and it was important to have this functionality within a single script.</li>
+                        <li>a Singleton class StateManager stored references to gameObjects of the separate game states, and a method that disables the current game state and enables a new one.</li>
+                        <li>Each state had its own gameObject. It also made referencing in editor much easier.</li>
+                        <li>Each state class in a C# script inherited from an abstract BaseState class that allowed for overriding Start() and Update() methods.</li>
+                    </ul>
+                    
+                    This solution allowed 4 coders to work on their own respective states with a very small amount of merge conflicts in the end. What was also important is that the team had varying experience with game programming, so this solution, though not very optimized, allowed for a quick implementation into the workflow of all members.
+                    </p>
+                    <a href="https://ultimatedecaf.itch.io/cake-and-slap" class="button">itch.io</a>
+                    <a href="https://github.com/UltimateDecaf/puppet-challenge" class="button">GitHub</a>
+                    <!-- Add more buttons or content as needed -->
+            </div>
+            <div class="project" id="project3-details">
+                <h2>Can't Touch This!</h2>
+                <h4>January 2024</h4>
+                <p>My role: Game Designer, Level Designer, Programmer</p>
+                <p> Tech used: Unity, C# </p>
+                    <ul  class="skill-list">
+                        <li>Based on ‘The World’s Hardest Game’ by Stephen Critoph</li>
+                        <li>I have ‘reversed-engineered’ the game logic (traps, level progression, player controller, etc.).</li>
+                        <li>Created three own levels, and recreated one from game (with my positioning of keys).</li>
+                    </ul>
+                    Some takeaways:
+                    <ul>
+                        <li>First time dealing with transfering the data from one scene to another.</li>
+                        <li>Tried designing code for scalability: added new type of trap movement, ensured that adding levels does not require too much workarounds in code</li>
+                        <li>Designing for difficulty was fun (it took me more than 100 tries to get through level 3).</li>
+                    </ul>
+                    </p>
+                    <a href="https://drive.google.com/file/d/19P2qLj9UYxdl1hr94nQyZkuo9uCY6ZH8/view?usp=drive_link" class="button">Windows Build</a>
+                    <a href="https://github.com/UltimateDecaf/can-t-touch-this" class="button">GitHub</a>
+                    <!-- Add more buttons or content as needed -->
+            </div>
+
+            <div class="project" id="project4-details">
+                <h2>Bubble Clicker</h2>
+                <h4>February 2024</h4>
+                <p>My role: Game Designer, Programmer</p>
+                <p>Tech used: C++, SFML</p>
+                <p>Having learnt the basics of SFML and C++, I tried to make my own small game from scratch. I decided to make a small clicker, where the player is to click as many bubbles as they can within a time limit of 30 seconds.
+
+                    In this small project I dealt on my own with:
+                    
+                    <ul  class="skill-list">
+                        <li>Alignment of sprites and text using code (though implementation was in SFML, the concepts can be well translated into game engines). </li>
+                        <li>Adding a timer countdown that is properly displayed in game. </li>
+                        <li>C++11 Random Number Generation. </li>
+                        <li>How and when should the program generate random positions for bubbles. 100 positions are calculated at the start-up, and stored in a std::vector. The game goes through a vector one by one, whenever the bubble is popped. </li>
+                        <li>Changing states (the game screen and game related UI are not shown, while not in game session). </li>
+                        <li>Making game replayable in one session (where and how to reset variables so that the game can be replayed without any exceptions). </li>
+                    </ul>
+
+                    For this project I decided not to make separate classes and methods, all of the functionality is in main() function. However, if I decide to proceed further with the project, a better code organization will be introduced.
+                    <br>
+                    Apart from code organization, certain features can be introduced or fixed:
+                    <ul  class="skill-list">
+                        <li> Better randomization of positions. </li>
+                        <li> Simple animation to show a successful click. </li>
+                        <li> Randomize bubble's radius within a defined range. </li>
+                        <li> Introduce power-ups (e.g. time limit extension). </li>
+                        <li> Make more bubbles appear on screen and add a lifetime to them. </li>
+                    </ul>
+                    <a href="https://github.com/UltimateDecaf/bubble-clicker" class="button">GitHub</a>
+                    <!-- Add more buttons or content as needed -->
+            </div>
+                <!-- Add screenshots or other media here -->
+                <div class="project" id="project5-details">
+                    <h2>TechSurvival</h2>
+                    <h4>June - September 2023</h4>
+                    <p>My role: Game Designer, Programmer</p>
+                    <p>Tech used: Unity, C#, Unity Netcode for GameObjects</p>
+                    <p>
+                       <ul  class="skill-list">
+                        <li>Top-down 2D shooter that allows cooperative play with up to 4 players.</li>
+                        <li>Client-Server Architecture is implemented using Netcode for GameObjects.</li>
+                       </ul>
+                        </p>
+                        <p class="skill-list">The project is based on Nathan Farrer’s Unity Multiplayer course. My contribution is that instead of the PvP, I created a co-op game where players compete against swarms of enemies. 
+                            Hence, all the logic around enemies (spawning, their movement, damage) and scores (with leaderboard that can be toggled) are made by me.
+                            Also, the course had tanks as avatar, and the movement needed to be adjusted for a humanoid cyborg.
+                            These changes also needed to account for client-server architecture</p>
+
+                        <ul  class="skill-list">
+                            <li>The project started when I had very little experience with Unity, therefore, I feel like it is too far away from being good, but I learnt a lot about the necessity of a well-designed codebase.</li>
+                            <li>I also learned about the concepts related to netcode, and networking in games.</li>
+                        </ul>
+                        <a href="https://drive.google.com/file/d/1nkz9RthK04kk2vM-hKORv7dPA9Sv_kZi/view?usp=drive_link" class="button">Windows Build</a>
+                        <a href="https://github.com/UltimateDecaf/2DTopDown" class="button">GitHub</a>
+                        <!-- Add more buttons or content as needed -->
+                </div>
+           
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </div>
+ 
+    <footer>
+        <p>This website is inspired by <a href="https://kney-delach.github.io/"> Ori Lazar's amazing portfolio.</a></p>
+    </footer>
+</body>
+</html>
