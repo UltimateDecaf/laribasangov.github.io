@@ -53,7 +53,7 @@ img {
     font-size: 1.2rem; /* Larger font size for buttons */
 }
 .small-button {
-    max-width: 30px; /* Limit the width of the buttons */
+    max-width: 45px; /* Limit the width of the buttons */
 }
 
 .small-button:hover {
