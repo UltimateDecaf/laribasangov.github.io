@@ -23,31 +23,52 @@
         <p style="font-size: 1.2rem;">I enjoy making games, programming, and learning new things. Comfortable with Unity, getting familiar with C++ and other engines.</p> <!-- Larger font size for description -->
         <div id="buttons">
             <button class="button" onclick="showSkills()">Skills</button>
+            <button class="button" onclick="showWorkExp()">Work Experience</button>
             <button class="button" onclick="showProjects()">Projects</button>
         </div>
-        <div id="skills">
+        <div id="skills" class="fade">
             <ul class="skill-list">
                 <li><h3>Programming languages</h3></li>
                 <ul class="skill-list">
-                    <li><b>C# (Unity)</b> - experience in 3 game jams, and personal projects.</li>
-                    <li><b>C++</b> - currently learning, have a small project made with SFML.</li>
-                    <li><b>Java</b> - language that introduced me to OOP, and Full-Stack Application Development.</li>
+                    <li><b>C# (Unity)</b> - experience in commercial setting, 3 game jams and a personal project.</li>
+                    <li><b>C++</b> - currently learning: in Unreal Engine, and with SFML library.</li>
                 </ul>
                 <li><h3>Game Engines</h3></li>
                 <ul class="skill-list">
-                    <li><b>Unity</b>- comfortable with the engine, and tools like Cinemachine, Input System. Familiar with Netcode for GameObjects.</li>
-                    <li><b>Unreal Engine</b> - currently learning, know the layout and the basics of Blueprints.</li>
+                    <li><b>Unity</b>- experience in commercial setting. Familiar with Netcode for GameObjects.</li>
+                    <li><b>Unreal Engine</b> - have a simple project finished. Actively learning the engine at the moment.</li>
                     <li><b>ZDoom ACS, ZScript</b> - comfortable with ACS scripting, familiar with ZScript. If for some reason, you want to make a game in GZDoom, I could countribute!</li>
                 </ul>
                 <li><h3>Other tools</h3></li>
                 <ul>
                     <ul class="skill-list">
                         <li>Version Control with Git LFS</li>
+                        <li>Jira</li>
                         <li>Adobe Photoshop</li>
                         <li>PuTTy, WinSCP </li>
                         <li>Ultimate Doom Builder</li>
                     </ul>
                 </ul>
+            </ul>
+        </div>
+        <div id="workExp" class="fade">
+            <ul class="skill-list">
+                <h3 style="text-align:center;">WORK EXPERIENCE</h3>
+                <p style="text-align:center;"><b>March - May 2024</b></p>
+                <h4>Gameplay Programmer - Blackburne Games (Internship/Abu Dhabi, UAE)</h4>
+                <ul class="skill-list">
+                    <li>Contributed to PvPvE dungeon crawler – Bravehood.</li>
+                    <li>Key Results: designed and implemented 8 special attacks for in-game weapons. I was responsible for all the aspects of development: code implementation, visual effects, animation and network synchronization.</li>
+                    <li>Updated monsters’ death state animation to meet PEGI 7 requirements.</li>
+                    <li>Kept track of current bugs in Jira.</li>
+                </ul>
+                <li><h3>Tech Used</h3></li>
+                <ul class="skill-list">
+                    <li><b>Unity</b> - worked with existing codebase, company's API for Unity, VFX and Animations.</li>
+                    <li><b>GitLab, Git LFS</b> - version control in a commercial setting.</li>
+                    <li><b>Jira</b> - task and bug tracking.</li>
+                </ul>
+                <img class="other-img" src="bravehood.jpg" alt="Bravehood logo">
             </ul>
         </div>
         <div id="projects" class="fade">
@@ -58,7 +79,8 @@
             </div>
             <div class="project-buttons">
                 <div class="project-button"><img src="bubbleclicker.png" alt="Project 4" class="project-img" onclick="showProject('project4-details')"></div>
-                <div class="project-button"><img src="techsurvival.png" alt="Project 5" class="project-img" onclick="showProject('project5-details')"></div>
+                <div class="project-button"><img src="experiment-button.png" alt="Project 5" class="project-img" onclick="showProject('project5-details')"></div>
+                <div class="project-button"><img src="techsurvival.png" alt="Project 5" class="project-img" onclick="showProject('project6-details')"></div>
             </div>
             <div class="project" id="project1-details">
                 <h2>BirminDoom </h2>
@@ -157,6 +179,29 @@
             </div>
                 <!-- Add screenshots or other media here -->
                 <div class="project" id="project5-details">
+                    <h2>This Is Not An Experiment!</h2>
+                    <h4>June 2023</h4>
+                    <p>My role: Project Lead, Additional Programming</p>
+                    <p>Tech used: Unity, C#, Git LFS</p>
+                    <p>
+                       <ul  class="skill-list">
+                        <li>Submission to 1Up Game Jam 2023 organized by Games Development Society, University of Birmingham.</li>
+                        <li>A rhythm game that also tests your reflexes.</li>
+                        <li>Ranked 1st in <b>Polish</b> category. <i>(Does the game have bugs? A nice UI? Additional gameplay
+                            effects?)</i></li>
+                       </ul>
+                        </p>
+                        <p class="skill-list">This was my first participation in a game jam, and for me and all other team members it was our introduction to Unity game engine</p>
+
+                        <ul  class="skill-list">
+                            <li>The project started when I had very little experience with Unity, therefore, I feel like it is too far away from being good, but I learnt a lot about the necessity of a well-designed codebase.</li>
+                            <li>I also learned about the concepts related to netcode, and networking in games.</li>
+                        </ul>
+                        <a href="https://ultimatedecaf.itch.io/this-is-not-an-experiment" class="button">Web Build (itch.io)</a>
+                        <!-- Add more buttons or content as needed -->
+                </div>
+
+                <div class="project" id="project6-details">
                     <h2>TechSurvival</h2>
                     <h4>June - September 2023</h4>
                     <p>My role: Game Designer, Programmer</p>
@@ -176,16 +221,15 @@
                             <li>The project started when I had very little experience with Unity, therefore, I feel like it is too far away from being good, but I learnt a lot about the necessity of a well-designed codebase.</li>
                             <li>I also learned about the concepts related to netcode, and networking in games.</li>
                         </ul>
+                        <h2></h2>
                         <a href="https://drive.google.com/file/d/1nkz9RthK04kk2vM-hKORv7dPA9Sv_kZi/view?usp=drive_link" class="button">Windows Build</a>
                         <a href="https://github.com/UltimateDecaf/2DTopDown" class="button">GitHub</a>
-                        <!-- Add more buttons or content as needed -->
                 </div>
            
             </div>
             <!-- Add more projects as needed -->
         </div>
     </div>
- 
     <footer>
         <p>This website is inspired by <a href="https://kney-delach.github.io/"> Ori Lazar's amazing portfolio.</a></p>
     </footer>

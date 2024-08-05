@@ -1,24 +1,28 @@
 function showSkills() {
-   //     document.getElementById('projects').classList.remove('fade.hidden');
-  //  document.getElementById('skills').classList.add('fade');
-
     setTimeout(function() {
         document.getElementById('skills').style.display = 'block';
         document.getElementById('projects').style.display = 'none';
+        document.getElementById('workExp').style.display = 'none';
       //  document.getElementById('skills').classList.remove('fade');
     }, 500);
 }
 
 function showProjects() {
-   // document.getElementById('skills').classList.remove('fade');
-  //  document.getElementById('projects').classList.add('fade');
     setTimeout(function() {
         document.getElementById('skills').style.display = 'none';
+        document.getElementById('workExp').style.display = 'none';
         document.getElementById('projects').style.display = 'block';
       //  document.getElementById('projects').classList.remove('fade');
     }, 500);
 }
 
+function showWorkExp() {
+     setTimeout(function() {
+         document.getElementById('workExp').style.display = 'block';
+         document.getElementById('projects').style.display = 'none';
+         document.getElementById('skills').style.display = 'none';
+     }, 500);
+ }
 // Function to show project details for a specific project
 function showProjectDetails(projectId) {
     // Hide all project details

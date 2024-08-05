@@ -29,6 +29,12 @@ img {
     margin-top: 20px;
 }
 
+.other-img {
+    border-radius: 8px;
+    scale: 1;
+}
+
+
 #links {
     margin-top: 20px;
 }
@@ -64,7 +70,7 @@ img {
     transform: scale(1.1);
 }
 
-#skills, #projects {
+#skills, #projects, #workExp {
     display: none;
     margin-top: 20px;
 }
